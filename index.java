@@ -1,5 +1,6 @@
 
 import data.sku;
+import handler.costCalculations;
 import handler.promotionData;
 import handler.skuData;
 
@@ -17,13 +18,14 @@ public class index {
 
     // Getting the SKU value
     Scanner input = new Scanner(System.in);
-    String skuData = checkWithUser("files//skuData", " A=30,B=40", "", input);
+    String skuData = checkWithUser("PromotionalService//files//skuData", " A=30,B=40", "", input);
     skuData obj = new skuData();
     sku skuObj = obj.setData(skuData);
 
     // Getting the promotional value file/promotionData 3 of A's for 130 EOL 2 of
     // B's for 45
-    File fileData = new File("files//promotionData.txt");
+    System.out.println("Using Promotional Data as - ");
+    File fileData = new File("PromotionalService//files//promotionData.txt");
     BufferedReader br = new BufferedReader(new FileReader(fileData));
     String st;
     String promotionalData = "";
@@ -35,6 +37,10 @@ public class index {
     System.out.println(promoObj);
     System.out.println("Enter the Buying Data in format A,A,A,B,B,B etc");
     String inputString = input.nextLine();
+    costCalculations costObj = new costCalculations();
+    int finalCost = costObj.returnCost(inputString, skuObj, promoObj);
+    System.out.println("==============================================================");
+    System.out.println("Cost to be charged = " + finalCost);
     input.close();
   }
 
