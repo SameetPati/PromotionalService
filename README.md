@@ -34,9 +34,11 @@ Java Code for SKU Service, where user can provide SKU data and Promotion Data an
   ## User to enter the items brought, the items should match the SKU items or the items would be rejected
   
   SKU,SKU,SKU,A,B,C,Z,AA,CC,A,A,B,B,D
+
   Invalid Item, Z Item Not Present in the SKU. Ignoring the Item
   Invalid Item, AA Item Not Present in the SKU. Ignoring the Item
   Invalid Item, CC Item Not Present in the SKU. Ignoring the Item
+  
   Adding 130 for [A, A, A]
   Adding 45 for [B, B]
   Adding 30 for [C, D]
