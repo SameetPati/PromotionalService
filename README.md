@@ -46,7 +46,9 @@ Java Code for SKU Service, where user can provide SKU data and Promotion Data an
   Adding 48 for SKU
   Adding 48 for SKU
   Adding 40 for B
+
   ==============================================================
+  
   Cost to be charged = 389
 
 # The test cases was not able to be designed as the configuration of the Junit was failing on the system.
