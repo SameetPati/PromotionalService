@@ -1,4 +1,5 @@
 
+import data.sku;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,9 +13,20 @@ public class index {
   public static void main(String args[]) throws IOException {
     System.out.println("Welcome to Promotion service.");
 
-    // Getting thr SKU value from the user
+    // Getting the SKU value
     Scanner input = new Scanner(System.in);
     String skuData = checkWithUser("files//skuData", " A=30,B=40", "", input);
+
+
+    // Getting the promotional value file/promotionData 3 of A's for 130 EOL 2 of
+    // B's for 45
+    File fileData = new File("files//promotionData.txt");
+    BufferedReader br = new BufferedReader(new FileReader(fileData));
+    String st;
+    String promotionalData = "";
+    while ((st = br.readLine()) != null) {
+      promotionalData = promotionalData + st + " EOL ";
+    }
   }
 
   public static String checkWithUser(String file, String format, String srparator, Scanner scan) throws IOException {
