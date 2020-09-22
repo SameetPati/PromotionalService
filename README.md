@@ -35,9 +35,9 @@ Java Code for SKU Service, where user can provide SKU data and Promotion Data an
   
   SKU,SKU,SKU,A,B,C,Z,AA,CC,A,A,B,B,D
 
-  Invalid Item, Z Item Not Present in the SKU. Ignoring the Item
-  Invalid Item, AA Item Not Present in the SKU. Ignoring the Item
-  Invalid Item, CC Item Not Present in the SKU. Ignoring the Item
+  Invalid Item, Z Item Not Present in the SKU. Ignoring the Item\n
+  Invalid Item, AA Item Not Present in the SKU. Ignoring the Item\n
+  Invalid Item, CC Item Not Present in the SKU. Ignoring the Item\n
   
   Adding 130 for [A, A, A]
   Adding 45 for [B, B]
@@ -48,7 +48,7 @@ Java Code for SKU Service, where user can provide SKU data and Promotion Data an
   Adding 40 for B
 
   ==============================================================
-  
+
   Cost to be charged = 389
 
 # The test cases was not able to be designed as the configuration of the Junit was failing on the system.
