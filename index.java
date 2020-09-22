@@ -1,5 +1,7 @@
 
 import data.sku;
+import handler.promotionData;
+import handler.skuData;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +18,8 @@ public class index {
     // Getting the SKU value
     Scanner input = new Scanner(System.in);
     String skuData = checkWithUser("files//skuData", " A=30,B=40", "", input);
-
+    skuData obj = new skuData();
+    sku skuObj = obj.setData(skuData);
 
     // Getting the promotional value file/promotionData 3 of A's for 130 EOL 2 of
     // B's for 45
@@ -27,6 +30,12 @@ public class index {
     while ((st = br.readLine()) != null) {
       promotionalData = promotionalData + st + " EOL ";
     }
+    promotionData datObj = new promotionData();
+    HashMap<List<String>, Integer> promoObj = datObj.formatData(promotionalData, skuObj);
+    System.out.println(promoObj);
+    System.out.println("Enter the Buying Data in format A,A,A,B,B,B etc");
+    String inputString = input.nextLine();
+    input.close();
   }
 
   public static String checkWithUser(String file, String format, String srparator, Scanner scan) throws IOException {
